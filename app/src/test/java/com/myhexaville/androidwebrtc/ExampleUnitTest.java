@@ -1,4 +1,4 @@
-package com.myhexaville.androidwebrtc;
+package com.tolgatastimur.androidwebrtc;
 
 import org.junit.Test;
 

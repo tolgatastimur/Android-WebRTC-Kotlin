@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 buildscript {
     repositories {
@@ -15,14 +17,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    compileSdkVersion 29
+    buildToolsVersion '27.0.3'
     dataBinding {
         enabled true
     }
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
-        applicationId "com.myhexaville.androidwebrtc"
+        applicationId "com.tolgatastimur.androidwebrtc"
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
@@ -61,4 +63,8 @@ dependencies {
     compile files('libs/autobanh.jar')
     compile files('libs/base_java.jar')
     compile files('libs/libjingle_peerconnection.jar')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
